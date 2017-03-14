@@ -1,0 +1,24 @@
+# Site settings
+title: "Open Data for Digital Biblical Humanities"
+author: "Jonathan Robie"
+description: "Serious Bible students need affordable access to reliable resources. Scholarly communities depend on high quality open data. Let's <a href='http://biblicalhumanities.org/dashboard/'>grow that data</a> together!"
+keywords: "Digital Humanities, Biblical Greek, Query Languages, Data Modeling, XML, JSON, Language Learning, Community Building, Open Data, Open Source"
+biography: "I am a computer scientist and instigator in chief at <a href='http://biblicalhumanities.org'>biblicalhumanities.org</a> with a passion for <a href='http://www.ibiblio.org/bgreek/forum/'>biblical Greek</a> and digital humanities. I am also lead editor of <a href='https://www.w3.org/TR/xquery-31/'>W3C XQuery 3.1</a> and <a href='https://www.w3.org/TR/xpath-31/'>W3C XPath 3.1</a>."
+colophon: "© MMXVII by Jonathan Robie.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/''>Jekyll</a> using the <a href='https://github.com/hugoferreira/papyrus-theme''>Papyrus theme</a>."
+
+baseurl: ""
+url: "http://hugosereno.eu"
+
+twitter_username: jonathan_robie
+github_username: jonathanrobie
+# google-analytics: UA-69060-5
+
+simple_search: http://google.com/search
+markdown: kramdown
+highlighter: pygments
+permalink: /blog/:year/:month/:day/:title/
+
+gems:
+- jekyll-sitemap
+- jekyll-gist
+- pygments.rb
