@@ -7,7 +7,7 @@ biography: "I am a computer scientist and instigator in chief at <a href='http:/
 colophon: "© MMXVII by Jonathan Robie.<br>Content available under <a href='http://creativecommons.org/licenses/by-nc-sa/4.0/''>Creative Commons (BY-NC-SA)</a> unless otherwise noted.<br>This site is hosted at <a href='https://pages.github.com/''>Github Pages</a> and created with <a href='http://jekyllrb.com/''>Jekyll</a> using the <a href='https://github.com/hugoferreira/papyrus-theme''>Papyrus theme</a>."
 
 baseurl: ""
-url: "http://hugosereno.eu"
+url: "http://jonathanrobie.biblicalhumanities.org"
 
 twitter_username: jonathan_robie
 github_username: jonathanrobie
