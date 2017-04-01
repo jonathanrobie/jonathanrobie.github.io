@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Markdown and Interpretation
+title: Markup and Interpretation
 date: 2017-03-30 15:46
 comments: true
 external-url:
