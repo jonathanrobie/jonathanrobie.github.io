@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Treedown: A Simple Notation for Syntax"
-date: 2017-05-12 15:46
+date: 2017-05-24 15:46
 comments: true
 external-url:
 categories: Treebanks
@@ -156,7 +156,11 @@ The Treedown representation shows much less detail than the Cascadia Syntax Tree
 
 ![John 1:1]({{ site.url }}/images/john.1.1.cascadia.png "John 1:1 in Cascadia Syntax Graphs")
 
-This is the same sentence we saw at the beginning of this post:
+We can use the configuration dialog to trim that down to just clauses and clause functions, which gives us a representation like the Treedown representation we have been working with:
+
+![John 1:1]({{ site.url }}/images/cascadia-configure-clauses.png "John 1:1 in Cascadia Syntax Graphs")
+
+Compare that to the representation of the same sentence we saw at the beginning of this post:
 
 ![John 1:1]({{ site.url }}/images/john.1.1.treedown.greek.png "John 1:1 in Treedown (Greek)") | ![John 1:1]({{ site.url }}/images/john.1.1.treedown.english.png "John 1:1 in Treedown (English)")
 
