@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Treedown: A Simple Notation for Syntax"
-date: 2017-05-24 15:46
+date: 2017-05-12 15:46
 comments: true
 external-url:
 categories: Treebanks
