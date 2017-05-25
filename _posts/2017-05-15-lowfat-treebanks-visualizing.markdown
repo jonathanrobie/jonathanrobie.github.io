@@ -156,7 +156,7 @@ The Treedown representation shows much less detail than the Cascadia Syntax Tree
 
 ![John 1:1]({{ site.url }}/images/john.1.1.cascadia.png "John 1:1 in Cascadia Syntax Graphs")
 
-We can use the configuration dialog to trim that down to just clauses and clause functions, which gives us a representation like the Treedown representation we have been working with:
+We can use the configuration dialog to trim that down to just clauses and clause functions, which gives us a representation closer to the granularity of the Treedown representation we have been working with:
 
 ![John 1:1]({{ site.url }}/images/cascadia-configure-clauses.png "John 1:1 in Cascadia Syntax Graphs")
 
