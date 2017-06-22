@@ -6,7 +6,7 @@ comments: true
 external-url:
 categories: 
 - Treebanks
-- xml, xpath, and xquery
+- XML, XPath, and XQuery
 ---
 
 ## A Lowfat Treebank Browser
