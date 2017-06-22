@@ -26,10 +26,10 @@ The code that does this is [in the syntax trees repo](https://github.com/biblica
   <div id="top">
     <h2>Lowfat Syntax Tree Browser</h2>
 
-	<form action="javascript:loadPassage()">
-	  <input type="text" name="passage" id="passage" value="John 3:16" autofocus>
-	  <button>Go!</button>
-	</form> 
+    <form action="javascript:loadPassage()">
+      <input type="text" name="passage" id="passage" value="John 3:16" autofocus>
+      <button>Go!</button>
+    </form> 
 
   </div>	
   <iframe id="display" src=""></iframe> 
