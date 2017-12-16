@@ -36,6 +36,21 @@ I came away from these two conferences believing that Jupyter Notebooks can play
 
 The `greeksyntax` package is a Python package designed for querying Greek morphology and syntax in the Jupyter environment. You can learn how to use it in this tutorial: [Tutorial: Greek Syntax Queries using Lowfat and Jupyter Notebooks](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html). With this package, you can do queries based on chapter, book, verse, lemmas, morphology, and syntax.  Simple queries are simple, complex queries can use the full power of XPath or XQuery.  Results can be returned directly or in the context of the containing sentence (with results highlighted), in either plain text or HTML.  Creating a package like this is simple and straightforward&mdash;if you are a programmer, you can see the implementation [here](https://github.com/biblicalhumanities/greek-new-testament/tree/master/labnotes/greeksyntax).
 
+# Installation
+
+In the next few months, I hope to set up an environment where people can create Notebooks on the Internet without installing anything at all - see this discussion: [Setting up a public notebook environment](https://github.com/jupyter/help/issues/267). I'm currently focused on setting up the environment that I want to deploy, adding useful resources and trying out use cases.
+
+But for now, you can install it like this:
+
+- Get [the Git repo](https://github.com/biblicalhumanities/greek-new-testament), either using Git or as a zip file.  You will need both syntax trees and the labnotes subdirectory, which contains the tutorials as Jupyter notebooks.
+- Install [BaseX](http://docs.basex.org/wiki/Startup)
+- Start the BaseX GUI, import the resources you need, one per database.  If you want my tutorials to work out of the box, then import the Nestle1904 Lowfat Trees as a database named "nestle1904lowfat" and import the PROIEL Lowfat Trees as a database named "proiel-lowfat".
+- Run the BaseX server, using default settings (that's what I use in the package right now).
+- Install [Jupyter](https://jupyter.org/install.html).
+- The `greeksyntax` package is in the `labnotes` subdirectory of the syntax trees Git repo mentioned in the first bullet point.  If you create your notebooks in that directory, it can be imported as shown in the tutorial.
+
+# Watch this space ...
+
 In the coming months, I intend to show some scenarios that illustrate how to use this environment for exploring specific aspects of Greek passages or the Greek language. Over time, I expect to provide additional resources in this package, drawing from packages in the [biblicalhumanities.org dashboard](http://biblicalhumanities.org/dashboard/).
 
 I also intend to simplify installation. To use this, you currently need to install [BaseX](http://basex.org/) and copy the [Nestle1904 Lowfat](https://github.com/biblicalhumanities/greek-new-testament/tree/master/syntax-trees/nestle1904-lowfat) trees into a database.  That step can be simplified by placing the database on the Web, which I will do in the coming months.
