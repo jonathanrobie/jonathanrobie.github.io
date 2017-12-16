@@ -52,5 +52,3 @@ But for now, you can install it like this:
 # Watch this space ...
 
 In the coming months, I intend to show some scenarios that illustrate how to use this environment for exploring specific aspects of Greek passages or the Greek language. Over time, I expect to provide additional resources in this package, drawing from packages in the [biblicalhumanities.org dashboard](http://biblicalhumanities.org/dashboard/).
-
-I also intend to simplify installation. To use this, you currently need to install [BaseX](http://basex.org/) and copy the [Nestle1904 Lowfat](https://github.com/biblicalhumanities/greek-new-testament/tree/master/syntax-trees/nestle1904-lowfat) trees into a database.  That step can be simplified by placing the database on the Web, which I will do in the coming months.
