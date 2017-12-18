@@ -46,6 +46,7 @@ But for now, you can install it like this:
 - Install [BaseX](http://docs.basex.org/wiki/Startup)
 - Start the BaseX GUI, import the resources you need, one per database.  If you want my tutorials to work out of the box, then import the Nestle1904 Lowfat Trees as a database named "nestle1904lowfat" and import the PROIEL Lowfat Trees as a database named "proiel-lowfat".
 - Run the BaseX server, using default settings (that's what I use in the package right now).
+- Install the BaseX client for Python: `$ pip install basexclient`
 - Install [Jupyter](https://jupyter.org/install.html).
 - The `greeksyntax` package is in the `labnotes` subdirectory of the syntax trees Git repo mentioned in the first bullet point.  If you create your notebooks in that directory, it can be imported as shown in the tutorial.
 
