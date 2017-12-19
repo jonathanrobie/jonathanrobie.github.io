@@ -30,6 +30,8 @@ For comparison, here is the original Lowfat tutorial and its output:
 
 - [Tutorial: Greek Syntax Queries using Lowfat and Jupyter Notebooks](http://jonathanrobie.biblicalhumanities.org/assets/greeksyntax-tutorial.html).
 
+If you just want to use PROIEL Lowfat trees the same way you use the Nestle 1904 Lowfat trees, there is no need to read the rest of this post.  If you are interested in the underlying models and the implementation, read on.
+
 # Converting PROIEL Treebanks to Lowfat
 
 Let's look at part of Matthew 1:20.  Here is how it looks in the graphical representation of PROIEL:
