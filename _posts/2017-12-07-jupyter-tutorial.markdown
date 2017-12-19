@@ -6,7 +6,7 @@ comments: true
 external-url:
 categories:
 - Treebanks
-- XML, XPath, and XQuery
+- greeksyntax package for Jupyter Notebooks
 ---
 
 Imagine writing about Greek passages or Greek syntax in a document that lets you create headings and write text, automatically display passages, perform queries and show results in scrollable windows, perform statistical analysis, and create graphics based on your data. You could introduce a problem, display relevant data, describe your results in narrative text, and analyze it in the same environment. In the following image you can see text followed by a query, with the results of the query in a scrollable window:
