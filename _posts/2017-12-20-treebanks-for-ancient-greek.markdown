@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Nine Kinds of Greek New Testament Treebanks"
-date: 2017-12-18 15:46
+title: "Nine Kinds of Ancient Greek Treebanks"
+date: 2017-12-20 15:46
 comments: true
 external-url:
 categories:
 - Treebanks
 ---
 
-When I blog or speak about Greek treebanks, I frequently refer to one or more of the treebanks that are currently available.  Few people realize how many treebanks exist for ancient Greek, and even fewer have ever seriously looked at more than one.  I do not know of a web page that lists all of the ones I know of, so I thought it would be helpful to list them in one blog post together with basic information about each.
+When I blog or speak about Greek treebanks, I frequently refer to one or more of the treebanks that are currently available.  Few people realize how many treebanks exist for ancient Greek, and even fewer have ever seriously looked at more than one.  I do not know of a web page that lists all of the ones I know of, so I thought it would be helpful to list them in one blog post, providing basic information about each.
 
 So here is a catalog of treebanks for ancient Greek.
 
