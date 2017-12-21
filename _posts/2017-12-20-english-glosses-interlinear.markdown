@@ -31,3 +31,7 @@ And this query shows all of glosses given for the word κατά:
 ```xquery
 distinct-values(//w[@normalized = 'κατά']/@gloss)
 ```
+
+You can see these queries and their results in this Jupyter Notebook:
+
+-[English Glosses](https://github.com/biblicalhumanities/greek-new-testament/blob/master/labnotes/English-Glosses.ipynb)
