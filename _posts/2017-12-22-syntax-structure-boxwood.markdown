@@ -14,7 +14,9 @@ I recently added [Context Sensitive English Glosses and Interlinears](http://jon
 
 The problem with interlinears is that they do not represent the syntactic structure of a Greek sentence at all.  Instead, the associate each word of the text with an English gloss and rely on your ability to connect English words to create meaning.  But the meaning of a Greek sentence cannot be accurately conveyed using English glosses.  Syntax diagrams do a much better job of that.
 
-There are [many kinds of syntax diagrams](http://jonathanrobie.biblicalhumanities.org/blog/2017/12/20/treebanks-for-ancient-greek/). The `greeksyntax` package for Jupyter now supports Boxwood, a format designed to be simple and to avoid distracting readers with lots of overhead.  You can use the `q.boxwood()` method to display a sentence in this format:
+There are [many kinds of syntax diagrams](http://jonathanrobie.biblicalhumanities.org/blog/2017/12/20/treebanks-for-ancient-greek/). The `greeksyntax` package for Jupyter now supports Boxwood, a format designed to be simple and to avoid distracting readers with lots of overhead.  Boxwood is used in the [Lowfat Syntax Tree Browser](http://ibiblio.org/bgreek/resources/syntax-trees/reader/), which was discussed in this post: [A Lowfat Treebank Browser](http://jonathanrobie.biblicalhumanities.org/blog/2017/05/22/lowfat-reader/).
+
+In a Jupyter notebook, you can use the `q.boxwood()` method to display a sentence in this format:
 
 ```python
 q.boxwood(milestone("Matt.1.20"))
