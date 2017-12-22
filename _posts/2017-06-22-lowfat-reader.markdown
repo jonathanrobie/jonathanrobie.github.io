@@ -9,8 +9,6 @@ categories:
 - XML, XPath, and XQuery
 ---
 
-## A Lowfat Treebank Browser
-
 I wrote a simple Lowfat Treebank browser, which can now be found here:
 
 [Lowfat Treebank Browser](http://www.ibiblio.org/bgreek/resources/syntax-trees/reader/)
