@@ -10,7 +10,7 @@ categories:
 
 When I first started working with Jupyter Notebooks, I was amazed that it was so easy to pull together large amounts of useful information.  But within a few hours, I was frustrated that it was difficult to organize and navigate in long and complex notebooks, and I was also frustrated with the difficulty of publishing them for others.
 
-Fortunately, Jupyter also has [notebook extensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest, including an excellent [Table of Contents](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html) extension that also creates a left-hand navigation bar, automatically numbers sections, and makes it much easier to work with long and complex notebooks.  I used it to organize a tutorial I posted here earlier, here is a screenshot:
+Fortunately, Jupyter also has [notebook extensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest), including an excellent [Table of Contents](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions/toc2/README.html) extension that also creates a left-hand navigation bar, automatically numbers sections, and makes it much easier to work with long and complex notebooks.  I used it to organize a tutorial I posted here earlier, here is a screenshot:
 
 ![greeksyntax tutorial]({{ site.url }}/images/jupyter-toc.png)
 
