@@ -9968,8 +9968,6 @@ div.output_prompt {
 }
 /* This class is the outer container of all output sections. */
 div.output_area {
-  max-height: 450px;
-  overflow: scroll;
   padding: 0px;
   page-break-inside: avoid;
   /* Old browsers */
@@ -11769,6 +11767,50 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/main.css">
+
+<style type="text/css">
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot');
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.woff') format('woff'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf') format('truetype'),
+         url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+
+<script src="https://rawgit.com/ipython-contrib/jupyter_contrib_nbextensions/master/src/jupyter_contrib_nbextensions/nbextensions/toc2/toc2.js"></script>
+
+<script>
+$( document ).ready(function(){
+
+            var cfg={'threshold':3,     // depth of toc (number of levels)
+             'number_sections': true,  // sections numbering
+             'toc_cell': false,          // useless here
+             'toc_window_display': true, // display the toc window
+             "toc_section_display": "block", // display toc contents in the window
+             'markTocItemOnScroll': false, 
+             'sideBar':true,             // sidebar or floating window
+             'navigate_menu':false       // navigation menu (only in liveNotebook -- do not change)
+            }
+
+            var st={};                  // some variables used in the script
+            st.oldTocHeight = undefined
+
+            // fire the main function with these parameters
+            require(['nbextensions/toc2/toc2'], function (toc2) {
+                toc2.table_of_contents(cfg, st);
+            });
+    });
+</script>
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -11778,6 +11820,15 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Tutorial:-Greek-Syntax-Queries-using-Lowfat-and-Jupyter-Notebooks">Tutorial: Greek Syntax Queries using Lowfat and Jupyter Notebooks<a class="anchor-link" href="#Tutorial:-Greek-Syntax-Queries-using-Lowfat-and-Jupyter-Notebooks">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
+<div class="toc" style="margin-top: 1em;"><ul class="toc-item"><li><span><a href="#Tutorial:-Greek-Syntax-Queries-using-Lowfat-and-Jupyter-Notebooks" data-toc-modified-id="Tutorial:-Greek-Syntax-Queries-using-Lowfat-and-Jupyter-Notebooks-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Tutorial: Greek Syntax Queries using Lowfat and Jupyter Notebooks</a></span><ul class="toc-item"><li><span><a href="#Opening-the-Database" data-toc-modified-id="Opening-the-Database-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Opening the Database</a></span></li><li><span><a href="#Don't-Try-to-Return-the-Whole-Database" data-toc-modified-id="Don't-Try-to-Return-the-Whole-Database-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Don't Try to Return the Whole Database</a></span></li><li><span><a href="#Book,-Chapter,-Verse,-Word" data-toc-modified-id="Book,-Chapter,-Verse,-Word-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Book, Chapter, Verse, Word</a></span><ul class="toc-item"><li><span><a href="#Showing-Text-with-find()" data-toc-modified-id="Showing-Text-with-find()-1.3.1"><span class="toc-item-num">1.3.1&nbsp;&nbsp;</span>Showing Text with <code>find()</code></a></span></li><li><span><a href="#Glosses-and-Morphology-using--interlinear()" data-toc-modified-id="Glosses-and-Morphology-using--interlinear()-1.3.2"><span class="toc-item-num">1.3.2&nbsp;&nbsp;</span>Glosses and Morphology using  <code>interlinear()</code></a></span></li><li><span><a href="#The-milestone()-function" data-toc-modified-id="The-milestone()-function-1.3.3"><span class="toc-item-num">1.3.3&nbsp;&nbsp;</span>The <code>milestone()</code> function</a></span></li></ul></li><li><span><a href="#Words,-Lemmas,-and-Morphology" data-toc-modified-id="Words,-Lemmas,-and-Morphology-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Words, Lemmas, and Morphology</a></span><ul class="toc-item"><li><span><a href="#Words-and-their-attributes-in-XML" data-toc-modified-id="Words-and-their-attributes-in-XML-1.4.1"><span class="toc-item-num">1.4.1&nbsp;&nbsp;</span>Words and their attributes in XML</a></span></li><li><span><a href="#Queries-on-words-and-their-attributes" data-toc-modified-id="Queries-on-words-and-their-attributes-1.4.2"><span class="toc-item-num">1.4.2&nbsp;&nbsp;</span>Queries on words and their attributes</a></span></li><li><span><a href="#Scoping-Queries-with-Milestones" data-toc-modified-id="Scoping-Queries-with-Milestones-1.4.3"><span class="toc-item-num">1.4.3&nbsp;&nbsp;</span>Scoping Queries with Milestones</a></span></li><li><span><a href="#Highlighting-query-results-with-highlight()" data-toc-modified-id="Highlighting-query-results-with-highlight()-1.4.4"><span class="toc-item-num">1.4.4&nbsp;&nbsp;</span>Highlighting query results with <code>highlight()</code></a></span></li><li><span><a href="#Showing-matching-items-separately-with-sentence()" data-toc-modified-id="Showing-matching-items-separately-with-sentence()-1.4.5"><span class="toc-item-num">1.4.5&nbsp;&nbsp;</span>Showing matching items separately with <code>sentence()</code></a></span></li><li><span><a href="#Multiple-scopes-in-a-single-cell" data-toc-modified-id="Multiple-scopes-in-a-single-cell-1.4.6"><span class="toc-item-num">1.4.6&nbsp;&nbsp;</span>Multiple scopes in a single cell</a></span></li></ul></li><li><span><a href="#Syntax" data-toc-modified-id="Syntax-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Syntax</a></span><ul class="toc-item"><li><span><a href="#Word-groups-in-XML" data-toc-modified-id="Word-groups-in-XML-1.5.1"><span class="toc-item-num">1.5.1&nbsp;&nbsp;</span>Word groups in XML</a></span></li><li><span><a href="#A-simple-syntax-query" data-toc-modified-id="A-simple-syntax-query-1.5.2"><span class="toc-item-num">1.5.2&nbsp;&nbsp;</span>A simple syntax query</a></span></li><li><span><a href="#Combining-conditions-on-words-and-word-groups" data-toc-modified-id="Combining-conditions-on-words-and-word-groups-1.5.3"><span class="toc-item-num">1.5.3&nbsp;&nbsp;</span>Combining conditions on words and word groups</a></span></li><li><span><a href="#Phrases" data-toc-modified-id="Phrases-1.5.4"><span class="toc-item-num">1.5.4&nbsp;&nbsp;</span>Phrases</a></span></li></ul></li><li><span><a href="#Next-Steps" data-toc-modified-id="Next-Steps-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>Next Steps</a></span></li></ul></li></ul></div>
 </div>
 </div>
 </div>
@@ -11833,7 +11884,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Database &#39;nestle1904lowfat&#39; was opened in 0.05 ms.
+<pre>Database &#39;nestle1904lowfat&#39; was opened in 1.7 ms.
 
 </pre>
 </div>
@@ -11960,7 +12011,17 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Book,-Chapter,-Verse,-Word">Book, Chapter, Verse, Word<a class="anchor-link" href="#Book,-Chapter,-Verse,-Word">&#182;</a></h2><p>Let's start by looking up specific texts. The following query returns the sentences in Matthew 5.  If you hover a mouse over a word in the query results, it displays morphological information about the word and a contextualized English gloss:</p>
+<h2 id="Book,-Chapter,-Verse,-Word">Book, Chapter, Verse, Word<a class="anchor-link" href="#Book,-Chapter,-Verse,-Word">&#182;</a></h2><p>Let's start by looking up specific texts using references to books, chapters, verses, and words.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Showing-Text-with-find()">Showing Text with <code>find()</code><a class="anchor-link" href="#Showing-Text-with-find()">&#182;</a></h3><p>The following query returns the sentences in Matthew 5.</p>
+<p>If you hover a mouse over a word in the query results, it displays morphological information about the word and a contextualized English gloss.</p>
 
 </div>
 </div>
@@ -12939,6 +13000,14 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Glosses-and-Morphology-using--interlinear()">Glosses and Morphology using  <code>interlinear()</code><a class="anchor-link" href="#Glosses-and-Morphology-using--interlinear()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>You can use the <code>interlinear()</code> function to show a table with contextualized glosses and morphology for a given word or verse:</p>
 
 </div>
@@ -13031,7 +13100,15 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The above queries use the <code>milestone()</code> function, which generates a query that looks for sentences corresponding to a particular reference.  You can execute it by itself to see the query it generates.</p>
+<h3 id="The-milestone()-function">The <code>milestone()</code> function<a class="anchor-link" href="#The-milestone()-function">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The above queries use the <code>milestone()</code> function, which generates a query that looks for text structures corresponding to a particular reference.  You can execute it by itself to see the query it generates.</p>
 
 </div>
 </div>
@@ -13243,6 +13320,14 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Words-and-their-attributes-in-XML">Words and their attributes in XML<a class="anchor-link" href="#Words-and-their-attributes-in-XML">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>In this tutorial, most results are presented as readable text, but words have a rich structure that contains a great deal of information.  Let's use the <code>xquery()</code> function to see the raw structure of that same word:</p>
 
 </div>
@@ -13396,10 +13481,17 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can use this information to look for specific characteristics of words.  Let's take a look at the individual parts of this:</p>
+<h3 id="Queries-on-words-and-their-attributes">Queries on words and their attributes<a class="anchor-link" href="#Queries-on-words-and-their-attributes">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With XPath and XQuery, the structure of the XML tells you how to write a query.  The following list shows each attribute associated with a word and provides an equivalent query.</p>
 <ul>
 <li><code>&lt;w&gt;</code> - Each word is wrapped in a <code>w</code> element.  You can count the words in the Greek New Testament with this query: <code>count(//w)</code>.</li>
-<li><code>xmlns:xi="http://www.w3.org/2001/XInclude"</code> is just noise for our purposes.  Ignore it.  It comes from including individual books into a master file using XInclude.</li>
 <li><code>class="verb"</code> - this word is a verb.  You can count the verbs in the Greek New Testament with this query: <code>count(//w[@class='verb'])</code>, which counts the <code>w</code> elements that have <code>class</code> attributes with the value <code>verb</code>.</li>
 <li><code>role</code> - the grammatical role of the word within its clause, in this case <code>p</code> means <code>predicate</code>. Not all words have roles - sometimes the role is given to a group of words rather than individual words, and some words like conjunctions do not have clausal roles.  You can count individual words that occur as predicates using this query: <code>count(//w[@role='p'])</code>.</li>
 <li><code>osisId</code> - the milestone for the individual word. You can find this word using the following query: <code>//w[@osisId='Matt.5.6!1']</code>.</li>
@@ -13442,7 +13534,15 @@ To change this limit, set the config variable
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We can search for all instances by calling <code>q.find()</code> like this:</p>
 <p><code>q.find(query)</code></p>
-<p>To search for instances in a given scope, we can use the <code>milestone()</code> function to specify the scope like this:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scoping-Queries-with-Milestones">Scoping Queries with Milestones<a class="anchor-link" href="#Scoping-Queries-with-Milestones">&#182;</a></h3><p>Sometimes you want to narrow the results of a query to a particular book or chapter. To search for instances in a given scope, we can use the <code>milestone()</code> function to specify the scope like this:</p>
 <p><code>q.find(milestone("Matt.5") + query)</code></p>
 <p>Let's look for instances of this in Matthew 5.</p>
 
@@ -13527,6 +13627,14 @@ To change this limit, set the config variable
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Highlighting-query-results-with-highlight()">Highlighting query results with <code>highlight()</code><a class="anchor-link" href="#Highlighting-query-results-with-highlight()">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13787,6 +13895,14 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Showing-matching-items-separately-with-sentence()">Showing matching items separately with <code>sentence()</code><a class="anchor-link" href="#Showing-matching-items-separately-with-sentence()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>A similar function, <code>sentence()</code>, shows the matching item after the sentence. This can be useful for posting to some online forums that strip formatting.</p>
 
 </div>
@@ -14005,6 +14121,14 @@ To change this limit, set the config variable
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Multiple-scopes-in-a-single-cell">Multiple scopes in a single cell<a class="anchor-link" href="#Multiple-scopes-in-a-single-cell">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -16430,9 +16554,9 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Syntax">Syntax<a class="anchor-link" href="#Syntax">&#182;</a></h2><p>Syntax is largely about exploring relationships within a clause. The <code>@role</code> attribute identifies these relationships.  Clauses can contain other clauses and phrases in complex recursive structures.</p>
+<h2 id="Syntax">Syntax<a class="anchor-link" href="#Syntax">&#182;</a></h2><h3 id="Word-groups-in-XML">Word groups in XML<a class="anchor-link" href="#Word-groups-in-XML">&#182;</a></h3><p>Syntax is largely about exploring relationships within a clause. The <code>@role</code> attribute identifies these relationships.  Clauses can contain other clauses and phrases in complex recursive structures.</p>
 <p>Groups of words are found in <code>&lt;wg&gt;</code> elements ("word group").  A clause is identified by the attribute <code>class='cl'</code>.  Like words, word groups can have <code>role</code> attributes that identify their role in a clause.</p>
-<p>Let's look for clauses that function as objects of other clauses.</p>
+<h3 id="A-simple-syntax-query">A simple syntax query<a class="anchor-link" href="#A-simple-syntax-query">&#182;</a></h3><p>Let's look for clauses that function as objects of other clauses.</p>
 
 </div>
 </div>
@@ -17769,6 +17893,14 @@ To change this limit, set the config variable
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Combining-conditions-on-words-and-word-groups">Combining conditions on words and word groups<a class="anchor-link" href="#Combining-conditions-on-words-and-word-groups">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Queries can combine conditions on individual words and conditions on word groups.  Let's modify that query to show only clauses that contain participles and function as objects of other clauses.  We will use <code>role='v'</code> rather than <code>class='verb</code> so that we find only clauses in which the participle governs the clause.</p>
 
 </div>
@@ -18534,6 +18666,14 @@ To change this limit, set the config variable
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Phrases">Phrases<a class="anchor-link" href="#Phrases">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
