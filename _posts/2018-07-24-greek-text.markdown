@@ -5,7 +5,7 @@ date: 2018-07-24 15:46
 comments: true
 external-url:
 categories:
-    - Open Data
+    - Open Scholarship
 ---
 
 The Bible is at the heart of digital biblical humanities, and open scholarship depends on an open text that can be used in scholarly publications and translations.  For the Greek New Testament, the critical editions that can be used in scholarly publications and most translations are not open.  The texts that are open are generally not considered acceptable for scholarly publications or translation.
